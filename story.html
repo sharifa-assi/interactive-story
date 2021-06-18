@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function show(shown, hidden) {
+        document.getElementById(shown).style.display = "block";
+        document.getElementById(hidden).style.display = "none";
+
+        return false;
+      }
+    </script>
+  </head>
+  <body>
+    <audio controls autoplay loop>
+      <source src="horrorSong.mp3" type="audio/mpeg" />
+    </audio>
+    <div id="Page1">
+      <h1>
+        The Townsville Killer<br />
+        <span>Based on a true story</span>
+      </h1>
+      <!-- <a href="#" onclick="return show('Page2','Page1');">Show page 2</a>
+      <a href="#" onclick="return show('Page3','Page1');">Show page 3</a> -->
+      <button
+        class="btn"
+        id="start-btn"
+        onclick="return show('Page2','Page1') "
+      >
+        PLAY
+      </button>
+    </div>
+    <div id="Page2" style="display: none">
+      Content of page 2
+      <a href="#" onclick="return show('Page1','Page2');">Show page 1</a>
+      <a href="#" onclick="return show('Page3','Page2');">Show page 3</a>
+    </div>
+    <div id="Page3" style="display: none">
+      Content of page 3
+      <a href="#" onclick="return show('Page1','Page3');">Show page 1</a>
+      <a href="#" onclick="return show('Page2','Page3');">Show page 2</a>
+    </div>
+  </body>
+</html>
+<!-- <head>
+      <title>Document</title>
+      <script>
+        function show(shown, hidden) {
+          document.getElementById(shown).style.display = "block";
+          document.getElementById(hidden).style.display = "none";
+          return false;
+        }
+      </script>
+    </head>
+    <body>
+      <div id="Page1">
+        Content of page 1
+        <a href="#" onclick="return show('Page2','Page1');">Show page 2</a>
+        <a href="#" onclick="return show('Page3','Page1');">Show page 3</a>
+      </div>
+
+      <div id="Page2" style="display: none">
+        Content of page 2
+        <a href="#" onclick="return show('Page1','Page2');">Show page 1</a>
+        <a href="#" onclick="return show('Page3','Page2');">Show page 3</a>
+      </div>
+
+      <div id="Page3" style="display: none">
+        Content of page 3
+        <a href="#" onclick="return show('Page1','Page3');">Show page 1</a>
+        <a href="#" onclick="return show('Page2','Page3');">Show page 2</a>
+      </div>
+    </body>
+  </html>
+</html> -->
