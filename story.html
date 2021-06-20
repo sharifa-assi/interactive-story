@@ -77,6 +77,7 @@
         THE TOWNSVILLE KILLER<br />
         <span class="title">BASED ON A TRUE STORY</span>
       </h1>
+      <img class="town" src="./images/Townsville.png" alt="png" width="100%">
       <button class="btn" onclick="return show('introduction','start');">PLAY</button>
     </div>
 
@@ -88,7 +89,7 @@
       of 13 people in your town on Halloween of 1987. But beware! One wrong
       choice could potentially lead you straight to your death...</p>
       </div>
-      <img class="middle" src="./images/start.gif" alt="gif" width="50%" height="auto">
+      <img class="middle" src="./images/playgame.gif" alt="gif" width="50%" height="auto">
       <button class="btn" onclick="return show('Chapter1','introduction');">NEXT</button>      
     </div>
 
@@ -96,8 +97,9 @@
       <div class="main" id="first">
       <p>It's finally the 31st of October. You've dressed as the "Townsville Killer"
       and are ready to go out to a friend's house party.</p>
-      <p>When you came back home, you found your mom and dad killed and the numbers 11 and 12 were written in their blood on the the wall.
+      <p>When you came back home, you found your mom and dad killed and the numbers 11 and 12 were written in their blood on the wall.
       This means there's still one soul to go which might be YOU.</p>
+      <img  class="thirteen" src="./images/blood13.png" alt="png">
       </div>
       <div class="buttons">
         <button class="btn" onclick="return show('Chapter4','Chapter1'),play('stair')">Go downstairs</button>    
@@ -108,7 +110,7 @@
     <div id="Chapter2" style="display: none">
       <div class="main">
       <p>Terrified the Townsville killer has returned after all these years, you
-      remain up stairs looking for a weapon but all you find is your dad's old
+      remain upstairs looking for a weapon but all you find is your dad's old
       razor.</p>
       </div>
       <img class="middle" src="./images/warning.gif" alt="gif" width="300px" height="auto"><br>
@@ -137,6 +139,7 @@
       <p>you see the front door thinking the Townsville killer is in your house to
       claim you as his 13th victim.</p>
       </div>
+      <img  class="frontdoor" src="./images/frontdoor.jpg" alt="jpg">
       <div class="buttons">
         <button class="btn" onclick="return show('Chapter6','Chapter4');">keep the door closed</button>
         <button class="btn" onclick="return showafter(5000,'screaming','Chapter5','Chapter4'),play('door')">Open the door</button>    
@@ -146,7 +149,9 @@
     <div id="Chapter5" style="display: none">
       <div class="main">
       <p>you got killed by the Townsville killer.</p>
+   
       </div>
+      <img  class="door" src="./images/screamingkevin.gif" alt="gif">
       <div class="buttons">
         <button class="btn" onclick="return show('Chapter4','Chapter5');">Back One Step</button>
         <button class="btn" onclick="return show('start','Chapter5');">REPLAY</button>
@@ -157,6 +162,7 @@
       <div class="main">
       <p>you get to your home phone in the living room. Just as you begin dialing
       the police, you discover the line has been cut.</p>
+      <img  class="call" src="./images/call.gif" alt="gif">
       </div>
       <div class="buttons">
         <button class="btn" onclick="return show('Chapter9','Chapter6'),play('walking')">Go to the kitchen</button>    
@@ -168,6 +174,7 @@
       <div class="main">
       <p>You stay in the living room searching for your phone only to know it
       currently has a dead battery.</p>
+      <img  class="battery" src="./images/battery.gif" alt="gif">
       </div>
       <div class="buttons">
         <button class="btn" onclick="return show('Chapter8','Chapter7'),play('searching'), play('screaming')">Search for a charger</button>    
@@ -181,6 +188,7 @@
       <p>You search for a charger when suddenly the power is cut off and someone
       enters and kills you</p>
       </div>
+      <img  class="kill" src="./images/kill.gif" alt="gif">
       <div class="buttons">
         <button class="btn" onclick="return show('Chapter7','Chapter8');">Back One Step</button>
         <button class="btn" onclick="return show('start','Chapter8');">REPLAY</button>
@@ -192,6 +200,7 @@
       <p>You go to the kitchen and pick the sharpest knife you see, and suddenly
       the power is cut off.</p>
       </div>
+      <img  class="knife" src="./images/tk.png" alt="png" width="300px" height="auto">
       <div class="buttons">
         <button class="btn" onclick="return showafter(5000,'mario','Chapter10','Chapter9'),play('walking')">Go back to the living room</button>    
         <button class="btn" onclick="return showafter(5000,'car','Chapter11','Chapter9'),play('stair')">Go to the basement</button>    
@@ -202,6 +211,7 @@
       <div class="main">
       <p>You got back to the living room and get killed</p>
       </div> 
+      <img  class="lroom" src="./images/livingroom.gif" alt="gif">
       <div class="buttons">
         <button class="btn" onclick="return show('Chapter9','Chapter10');">Back One Step</button>
         <button class="btn" onclick="return show('start','Chapter5');">REPLAY</button>
@@ -212,6 +222,7 @@
       <div class="main">
       <p>You go to the basement and escape then you see a car passing by.</p>
       </div>
+      <img  class="car" src="./images/streetcar.jpg" alt="jpg" width="50%" height="auto">
       <div class="buttons">
         <button class="btn" onclick="return showafter(2000,'wood','Chapter13','Chapter11')">Seek your way in the woods</button>    
         <button class="btn" onclick="return showafter(3000,'screaming','Chapter12','Chapter11'),play('car-acc')">Stop the car</button>    
@@ -222,6 +233,8 @@
       <div class="main">
       <p>You stop the car and you got killed. It's the Townsville Killer driving.</p>
       </div>
+
+      <img  class="stopcar" src="./images/stopcar.jpeg" alt="jpeg">
       <div class="buttons">
         <button class="btn" onclick="return show('Chapter11','Chapter12');">Back One Step</button>
         <button class="btn" onclick="return show('start','Chapter12');">REPLAY</button>
@@ -232,6 +245,7 @@
       <div class="main">
       <p>You hide and seek your way in the woods.</p>
       </div>
+      <img  class="hide" src="./images/wood.gif" alt="gif">
       <div class="buttons">
         <button class="btn" onclick="return show('Chapter14','Chapter13'),play('bad-finish')">Go to the light</button>    
         <button class="btn" onclick="return show('Chapter15','Chapter13'),play('celebrating')">Run away from it</button>    
@@ -251,6 +265,7 @@
       <div class="main">
       <p>You run away, find another car and reach the police station. You survived, Congrats!!</p>
       </div>
+      <img class="freedom" src="./images/happy.gif" alt="gif" width="45%" height="auto">
       <button class="btn" onclick="return show('start','Chapter15');">REPLAY</button>
     </div>
   </body>

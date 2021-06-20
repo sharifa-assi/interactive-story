@@ -87,6 +87,7 @@ h1 {
 .btn:hover {
   background: rgb(150, 14, 5);
   color: black;
+
 }
 
 .buttons {
@@ -99,7 +100,7 @@ h1 {
 }
 
 #first {
-  width: 50%;
+  width: 100%;
 }
 
 .middle {
@@ -107,3 +108,81 @@ h1 {
   margin-left: auto;
   margin-right: auto;
 }
+.knife {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.car {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.stopcar {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+}
+.thirteen {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+.door {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%;
+}
+
+.frontdoor {
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.call {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+  .battery {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+
+    .hide {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    width: 50%;
+    }
+    
+  .freedom {
+    
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    width: 50%;
+    
+  }
+  .kill {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+  }
+
+  .lroom {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    width: 30%;
+  }
