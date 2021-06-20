@@ -1,79 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>The Townsville Killer</title>
     <script>
       function show(shown, hidden) {
         document.getElementById(shown).style.display = "block";
         document.getElementById(hidden).style.display = "none";
-
         return false;
+      }
+      function play(id) {
+        document.getElementById(id).play();
+      }
+      function playafter(time, id) {
+        setTimeout(function () {
+          play(id);
+        }, time);
+      }
+      function showafter(time, id, shown, hidden) {
+        setTimeout(function () {
+          play(id);
+          show(shown, hidden);
+        }, time);
       }
     </script>
   </head>
   <body>
-    <audio controls autoplay loop>
-      <source src="horrorSong.mp3" type="audio/mpeg" />
-    </audio>
-    <div id="Page1">
+    <div>
+      <audio controls autoplay loop style="display: none">
+        <source src="./audio/horrorSong.mp3" type="audio/mpeg" />
+      </audio>
+      <audio id="breathing" controls style="display: none">
+        <source src="./audio/breathing (mp3cut.net).mp3.mp3" type="audio/mpeg" />
+      </audio>
+      <audio id="walking" controls style="display: none">
+        <source src="./audio/walking (mp3cut.net).mp3.mp3" type="audio/mpeg" />
+      </audio>
+      <audio id="stair" controls style="display: none">
+        <source src="./audio/stair.mp3" type="audio/mpeg" />
+      </audio>
+      <audio id="door" controls style="display: none">
+        <source src="./audio/bbc_door-creak_07037552 (mp3cut.net).mp3" type="audio/mpeg" />
+      </audio>
+      <audio id="screaming" controls style="display: none">
+        <source src="./audio/screaming.mp3" type="audio/mpeg" />
+      </audio>
+      <audio id="searching" controls style="display: none">
+        <source src="./audio/searching.mp3" type="audio/mpeg" />
+      </audio>
+      <audio id="mario" controls style="display: none">
+        <source src="./audio/super-mario-death-sound-sound-effect (mp3cut.net).mp3" type="audio/mpeg" />
+      </audio>
+      <audio id="car" controls style="display: none">
+        <source src="./audio/carPassing.mp3" type="audio/mpeg" />
+      </audio>
+      <audio id="wood" controls style="display: none">
+        <source src="./audio/wood (mp3cut.net).mp3" type="audio/mpeg" />
+      </audio>
+      <audio id="car-acc" controls style="display: none">
+        <source src="./audio/car-acc (mp3cut.net).mp3" type="audio/mpeg" />
+      </audio>
+      <audio id="bad-finish" controls style="display: none">
+        <source src="./audio/bad-f.mp3" type="audio/mpeg" />
+      </audio>
+      <audio id="celebrating" controls style="display: none">
+        <source src="./audio/celebrating (mp3cut.net).mp3" type="audio/mpeg" />
+      </audio>
+    </div>
+
+    <div id="start">
       <h1>
-        The Townsville Killer<br />
-        <span>Based on a true story</span>
+        THE TOWNSVILLE KILLER<br />
+        <span class="title">BASED ON A TRUE STORY</span>
       </h1>
-      <!-- <a href="#" onclick="return show('Page2','Page1');">Show page 2</a>
-      <a href="#" onclick="return show('Page3','Page1');">Show page 3</a> -->
-      <button
-        class="btn"
-        id="start-btn"
-        onclick="return show('Page2','Page1') "
-      >
-        PLAY
-      </button>
+      <button class="btn" onclick="return show('introduction','start');">PLAY</button>
     </div>
-    <div id="Page2" style="display: none">
-      Content of page 2
-      <a href="#" onclick="return show('Page1','Page2');">Show page 1</a>
-      <a href="#" onclick="return show('Page3','Page2');">Show page 3</a>
+
+    <div id="introduction" style="display: none">
+      <div class="main">
+      <p><span class="death">ARE YOU READY!</span><br>You will have to choose your character's path to
+      progress with the story and successfully escape the hands of an infamous
+      serial killer, the "Townsville Killer", who was responsible for the murder
+      of 13 people in your town on Halloween of 1987. But beware! One wrong
+      choice could potentially lead you straight to your death...</p>
+      </div>
+      <img class="middle" src="./images/start.gif" alt="gif" width="50%" height="auto">
+      <button class="btn" onclick="return show('Chapter1','introduction');">NEXT</button>      
     </div>
-    <div id="Page3" style="display: none">
-      Content of page 3
-      <a href="#" onclick="return show('Page1','Page3');">Show page 1</a>
-      <a href="#" onclick="return show('Page2','Page3');">Show page 2</a>
+
+    <div id="Chapter1" style="display: none">
+      <div class="main" id="first">
+      <p>It's finally the 31st of October. You've dressed as the "Townsville Killer"
+      and are ready to go out to a friend's house party.</p>
+      <p>When you came back home, you found your mom and dad killed and the numbers 11 and 12 were written in their blood on the the wall.
+      This means there's still one soul to go which might be YOU.</p>
+      </div>
+      <div class="buttons">
+        <button class="btn" onclick="return show('Chapter4','Chapter1'),play('stair')">Go downstairs</button>    
+        <button class="btn" onclick="return show('Chapter2','Chapter1');">remain upstairs</button>    
+      </div>
+    </div>
+
+    <div id="Chapter2" style="display: none">
+      <div class="main">
+      <p>Terrified the Townsville killer has returned after all these years, you
+      remain up stairs looking for a weapon but all you find is your dad's old
+      razor.</p>
+      </div>
+      <img class="middle" src="./images/warning.gif" alt="gif" width="300px" height="auto"><br>
+      <div class="buttons">
+        <button class="btn" onclick="return show('Chapter3','Chapter2'),play('walking'),playafter(6000,'screaming')">go to your bedroom</button>    
+        <button class="btn" onclick="return show('Chapter4','Chapter2'),play('stair')">go downstairs</button>    
+      </div>
+    </div>
+
+    <div id="Chapter3" style="display: none">
+      <div class="main">
+      <p>You rush to get the tennis racket you remember you have kept in your
+      closet. However, your room is farthest from the staircase and this results
+      in you not being able to hear the intruder's footsteps climbing up which
+      leads to your death.</p>
+      </div>
+      <img class="middle" src="./images/monophy.gif" alt="gif" width="25%" height="auto"><br>
+      <div class="buttons">
+        <button class="btn" onclick="return show('Chapter2','Chapter3');">Back One Step</button>
+        <button class="btn" onclick="return show('start','Chapter3');">REPLAY</button>
+      </div>
+    </div>
+    
+    <div id="Chapter4" style="display: none">
+      <div class="main">
+      <p>you see the front door thinking the Townsville killer is in your house to
+      claim you as his 13th victim.</p>
+      </div>
+      <div class="buttons">
+        <button class="btn" onclick="return show('Chapter6','Chapter4');">keep the door closed</button>
+        <button class="btn" onclick="return showafter(5000,'screaming','Chapter5','Chapter4'),play('door')">Open the door</button>    
+      </div>
+    </div>
+
+    <div id="Chapter5" style="display: none">
+      <div class="main">
+      <p>you got killed by the Townsville killer.</p>
+      </div>
+      <div class="buttons">
+        <button class="btn" onclick="return show('Chapter4','Chapter5');">Back One Step</button>
+        <button class="btn" onclick="return show('start','Chapter5');">REPLAY</button>
+      </div>
+    </div>
+
+    <div id="Chapter6" style="display: none">
+      <div class="main">
+      <p>you get to your home phone in the living room. Just as you begin dialing
+      the police, you discover the line has been cut.</p>
+      </div>
+      <div class="buttons">
+        <button class="btn" onclick="return show('Chapter9','Chapter6'),play('walking')">Go to the kitchen</button>    
+        <button class="btn" onclick="return show('Chapter7','Chapter6'),play('searching')">Search for your mobile phone</button>    
+      </div>
+    </div>
+
+    <div id="Chapter7" style="display: none">
+      <div class="main">
+      <p>You stay in the living room searching for your phone only to know it
+      currently has a dead battery.</p>
+      </div>
+      <div class="buttons">
+        <button class="btn" onclick="return show('Chapter8','Chapter7'),play('searching'), play('screaming')">Search for a charger</button>    
+        <!-- <button class="btn"  onclick="return showafter(3000,'screaming','Chapter8','Chapter7'),play('searching')">Search for a charger</button>     -->
+        <button class="btn" onclick="return show('Chapter9','Chapter7'),play('walking')">Go to the kitchen</button>    
+      </div>
+    </div>
+
+    <div id="Chapter8" style="display: none">
+      <div class="main">
+      <p>You search for a charger when suddenly the power is cut off and someone
+      enters and kills you</p>
+      </div>
+      <div class="buttons">
+        <button class="btn" onclick="return show('Chapter7','Chapter8');">Back One Step</button>
+        <button class="btn" onclick="return show('start','Chapter8');">REPLAY</button>
+      </div>
+    </div>
+
+    <div id="Chapter9" style="display: none">
+      <div class="main">
+      <p>You go to the kitchen and pick the sharpest knife you see, and suddenly
+      the power is cut off.</p>
+      </div>
+      <div class="buttons">
+        <button class="btn" onclick="return showafter(5000,'mario','Chapter10','Chapter9'),play('walking')">Go back to the living room</button>    
+        <button class="btn" onclick="return showafter(5000,'car','Chapter11','Chapter9'),play('stair')">Go to the basement</button>    
+      </div>
+    </div>
+
+    <div id="Chapter10" style="display: none">
+      <div class="main">
+      <p>You got back to the living room and get killed</p>
+      </div> 
+      <div class="buttons">
+        <button class="btn" onclick="return show('Chapter9','Chapter10');">Back One Step</button>
+        <button class="btn" onclick="return show('start','Chapter5');">REPLAY</button>
+      </div>
+    </div>
+    
+    <div id="Chapter11" style="display: none">
+      <div class="main">
+      <p>You go to the basement and escape then you see a car passing by.</p>
+      </div>
+      <div class="buttons">
+        <button class="btn" onclick="return showafter(2000,'wood','Chapter13','Chapter11')">Seek your way in the woods</button>    
+        <button class="btn" onclick="return showafter(3000,'screaming','Chapter12','Chapter11'),play('car-acc')">Stop the car</button>    
+      </div>
+    </div>
+    
+    <div id="Chapter12" style="display: none">
+      <div class="main">
+      <p>You stop the car and you got killed. It's the Townsville Killer driving.</p>
+      </div>
+      <div class="buttons">
+        <button class="btn" onclick="return show('Chapter11','Chapter12');">Back One Step</button>
+        <button class="btn" onclick="return show('start','Chapter12');">REPLAY</button>
+      </div>
+    </div>
+    
+    <div id="Chapter13" style="display: none">
+      <div class="main">
+      <p>You hide and seek your way in the woods.</p>
+      </div>
+      <div class="buttons">
+        <button class="btn" onclick="return show('Chapter14','Chapter13'),play('bad-finish')">Go to the light</button>    
+        <button class="btn" onclick="return show('Chapter15','Chapter13'),play('celebrating')">Run away from it</button>    
+      </div>
+    </div>
+    
+    <div id="Chapter14" style="display: none">
+      <div class="main"><p>It's just a dream :p</p></div>
+      <img class="middle" src="./images/dream.gif" alt="gif" width="45%" height="auto"><br>
+      <div class="buttons">   
+        <button class="btn" onclick="return show('Chapter13','Chapter14');">Back One Step</button>
+        <button class="btn" onclick="return show('start','Chapter12');">REPLAY</button>
+      </div>
+    </div>
+    
+    <div id="Chapter15" style="display: none">
+      <div class="main">
+      <p>You run away, find another car and reach the police station. You survived, Congrats!!</p>
+      </div>
+      <button class="btn" onclick="return show('start','Chapter15');">REPLAY</button>
     </div>
   </body>
 </html>
-<!-- <head>
-      <title>Document</title>
-      <script>
-        function show(shown, hidden) {
-          document.getElementById(shown).style.display = "block";
-          document.getElementById(hidden).style.display = "none";
-          return false;
-        }
-      </script>
-    </head>
-    <body>
-      <div id="Page1">
-        Content of page 1
-        <a href="#" onclick="return show('Page2','Page1');">Show page 2</a>
-        <a href="#" onclick="return show('Page3','Page1');">Show page 3</a>
-      </div>
-
-      <div id="Page2" style="display: none">
-        Content of page 2
-        <a href="#" onclick="return show('Page1','Page2');">Show page 1</a>
-        <a href="#" onclick="return show('Page3','Page2');">Show page 3</a>
-      </div>
-
-      <div id="Page3" style="display: none">
-        Content of page 3
-        <a href="#" onclick="return show('Page1','Page3');">Show page 1</a>
-        <a href="#" onclick="return show('Page2','Page3');">Show page 2</a>
-      </div>
-    </body>
-  </html>
-</html> -->

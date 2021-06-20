@@ -2,7 +2,7 @@
 ARE YOU READY! You will have to choose your character's path to progress with the story and successfully escape the hands of an infamous serial killer the "Townsville Killer" who was responsible for the murder of 13 people in your town on Halloween of 1987. But beware! One wrong choice could potentially lead you straight to your death...
 
 # Chapter 1
-It's finally the of 31st of October. You've gotten your Halloween outfit and are ready to go out to a friend's house party. When you came back home, you found your mom and dad dead and on the the wall above their heads the numbers 11 and 12 written in their blood. 
+It's finally the 31st of October. You've gotten your Halloween outfit and are ready to go out to a friend's house party. When you came back home, you found your mom and dad dead and on the the wall above their heads the numbers 11 and 12 written in their blood. 
 
 # Chapter 2
 Terrified the Townsville killer has returned after all these years, you remain up stairs looking for a weapon but all you find is your dad's old razor.
